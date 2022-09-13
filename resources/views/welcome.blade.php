@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -64,6 +67,7 @@
         </style>
     </head>
     <body>
+        <a href="{{Auth::user()->name}}">hiro</a>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
@@ -98,3 +102,4 @@
         </div>
     </body>
 </html>
+@endsection
